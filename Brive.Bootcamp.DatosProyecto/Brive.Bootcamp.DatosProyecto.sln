@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Brive.Bootcamp.DatosProyecto", "Brive.Bootcamp.DatosProyecto\Brive.Bootcamp.DatosProyecto.sqlproj", "{90637AE1-EBB9-48FB-8F3D-3053E14C64B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90637AE1-EBB9-48FB-8F3D-3053E14C64B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90637AE1-EBB9-48FB-8F3D-3053E14C64B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90637AE1-EBB9-48FB-8F3D-3053E14C64B7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{90637AE1-EBB9-48FB-8F3D-3053E14C64B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90637AE1-EBB9-48FB-8F3D-3053E14C64B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90637AE1-EBB9-48FB-8F3D-3053E14C64B7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1A6D580-6C64-46E4-847D-0BC1C6C7B3CD}
+	EndGlobalSection
+EndGlobal
