@@ -6,5 +6,6 @@
 	[FechaBusqueda] DATETIME     DEFAULT (getdate()) NOT NULL,
 	[Id_Busqueda_Usuario] INT NOT NULL,
 	PRIMARY KEY ([Id_Busqueda]),
-	CONSTRAINT [FK_Busqueda] FOREIGN KEY ([(Id_Usuario)]) REFERENCES ([Usuario][[Id_Usuario]])
+	CONSTRAINT [FK_Busqueda] FOREIGN KEY ([(Id_Busqueda_Usuario)]) REFERENCES [Usuario]([Id_Usuario])
+
 )
