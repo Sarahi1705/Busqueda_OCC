@@ -8,10 +8,14 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using Microsoft.AspNetCore.Cors;
 using Proyecto.Suerte.ApiReall.Models;
+
+
 
 namespace Proyecto.Suerte.ApiReall.Controllers
 {
+    //[EnableCors(origins: "https://localhost:44349",headers:"*", methods:"*")]
     public class UsuariosController : ApiController
     {
         private Model1 db = new Model1();

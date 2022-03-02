@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
+
 namespace Proyecto.Suerte.ApiReall
 {
     public static class WebApiConfig
@@ -10,6 +11,7 @@ namespace Proyecto.Suerte.ApiReall
         public static void Register(HttpConfiguration config)
         {
             // Configuración y servicios de Web API
+            //config.EnableCors();
 
             // Rutas de Web API
             config.MapHttpAttributeRoutes();
