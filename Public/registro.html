@@ -10,15 +10,16 @@
         <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
         <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
         <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-        <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+        <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Ingrese su Contraseña">
         <p>Fecha de nacimiento</p>
 
         <input class="controls" type="date" id="start" name="trip-start"
-               value="default"
+               value="yyyy-MM-dd"
                min="1972-01-01" max="2004-12-31">
                
-        <input class="botons" onclick="location.href='../index.html';"type="submit" value="Registrar">
+       <input class="botons"  type="submit" value="Registrar"onclick= "PostUsuario()">
         <p><a href="../index.html">¿Ya tengo Cuenta?</a></p>
     </section>
 </body>
+<script src="../Js/registro.js"></script>
 </html>

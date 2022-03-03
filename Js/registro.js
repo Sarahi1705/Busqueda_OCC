@@ -1,5 +1,6 @@
-let urlBase = "https://localhost:44349";
-const MetodoGet = () => {
+let urlBase = "https://localhost:44323";
+
+const MetodoLogin = () => {
 
     fetch(`${urlBase}/api/Usuarios`)
     .then(response => response.text())
@@ -7,7 +8,7 @@ const MetodoGet = () => {
 
 };
 
-const MetodoPost = () => {
+const Metodo = () => {
     let participantes = ["gabo", "vic", "raul", "omar"];
 
     fetch(`${urlBase}/api/prueba`, {
@@ -22,34 +23,41 @@ const MetodoPost = () => {
 
 };
 
-const MetodoPost2 = () => {
-    let participantes = [
+
+const PostUsuario = () => {
+var nombre =document.getElementById('nombres').value;
+var apellido =document.getElementById('apellidos').value;
+var correo =document.getElementById('correo').value;
+var contrasena =document.getElementById('contrasena').value;
+var fecha =document.getElementById('start').value;
+    console.log(fecha);
+    let participantes = 
         {
-            Nombre: "Gabo",
-            Edad: 17,
-            FechaNacimiento: '1994-10-17'
-        },
-        {
-            Nombre: "Gabo2",
-            Edad: 25,
-            FechaNacimiento: '1994-10-17'
-        },
-        {
-            Nombre: "Gabo3",
-            Edad: 56,
-            FechaNacimiento: '1994-10-17'
+            Nombre: nombre,
+            Apellido: apellido,
+            FechaNacimiento:fecha,
+            Contrasena: contrasena,
+            Correo: correo
         }
-    ]
-    fetch(`${urlBase}/api/prueba/post2`, {
+    fetch(`${urlBase}/api/Usuarios`, {
         method: 'POST',
         body: JSON.stringify(participantes),
         headers: {
             'Content-Type': 'application/json'
         }
     })
-    .then(response => response.text())
-    .then(data => console.log("Metodo Post2 api", data))
+    .then(response => response.json())
+    .then(data => {
+        const {nombre}=data;
+        console.log(nombre);
+    })
+        //console.log("Metodo Post usuario", data))
 
+};
+function registro(){
+    PostUsuarios();
+   // window.open("../index.html");
+    
 };
 
 const MetodoPut = () => {
@@ -86,7 +94,7 @@ const ParticipantesMayoresDeEdad = () => {
     .then(data => console.log("Participantes mayores de edad", data))
 }
 
-MetodoGet();
+//MetodoGet();
 /*MetodoPost();
 MetodoPost2();
 MetodoPut();
