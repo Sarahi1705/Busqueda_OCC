@@ -7,15 +7,17 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Source Sans Pro', sans-serif;
+    
 }
 
 body{
-    background: #ffffff;
+    background:   radial-gradient(50% 50% at 50% 50%, rgba(179, 240, 248, 0.66) 68.23%, rgba(195, 226, 2, 0) 100%);
+    
 }
 
 header{
-    position: fixed;
-    top: 0;
+    /*position: fixed;*/
+    top: 1;
     left: 0;
     width: 100%;
     height: 80px;
@@ -56,7 +58,7 @@ header{
     position: relative;
 }
 
-.menu-selected:before{
+/*.menu-selected:before{
     content: '';
     width: 100%;
     height: 4px;
@@ -64,7 +66,7 @@ header{
     position: absolute;
     top: 0;
     left: 0;
-}
+}*/
 
 .menu nav ul li a{
     color: #000000;
@@ -83,8 +85,99 @@ header{
 .menu nav ul li a i{
     display: none;
 }
+/* spacing */
 
-#icon-menu{
+table {
+    /*table-layout: fixed;*/
+    margin-top: 5rem;
+    width: 50%;
+    margin-left: auto;
+margin-right: auto;
+   
+    /*border-collapse: collapse;*/
+    /*border: 3px solid purple;*/
+
+  }
+  
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  
+  th, td {
+    padding: 20px;
+  }
+  html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  }
+  
+  thead th, tfoot th {
+    font-family: 'Helvetica';
+  }
+  
+  th {
+    letter-spacing: 2px;
+  }
+  
+  td {
+    letter-spacing: 1px;
+  }
+  
+  tbody td {
+    text-align: center;
+  }
+  
+  tfoot th {
+    text-align: right;
+  }
+  thead, tfoot {
+    background: #b7e7f0;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+  }
+  
+  thead th, tfoot th, tfoot td {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+    border: 3px solid rgb(0, 0, 0);
+  }
+  tbody tr:nth-child(odd) {
+    background-color: #bce2ee;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #e4eccc;
+  }
+  
+  tbody tr {
+    background-image: url(noise.png);
+  }
+  
+  table {
+    background-color: #f8f8f8;
+    border-top: 3rem;
+  }
+  caption{
+  font-family: 'Rock Salt';
+  padding: 20px;
+  font-style: italic;
+  caption-side: bottom;
+  color: #666;
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+/*#icon-menu{
     width: 50px;
     height: 50px;
     position: absolute;
@@ -101,7 +194,7 @@ header{
     cursor: pointer;
 }
 
-#icon-menu:hover{
+/*#icon-menu:hover{
     opacity: 0.8;
 }
 
@@ -109,7 +202,7 @@ header{
 
 /*Buscador de contenido*/
 
-#ctn-icon-search{
+/*#ctn-icon-search{
     position: absolute;
     right: 20px;
     height: 100%;
@@ -269,4 +362,4 @@ header{
         flex-wrap: wrap;
     }
 
-}
+}*/
