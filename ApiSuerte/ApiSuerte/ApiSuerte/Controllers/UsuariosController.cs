@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ApiSuerte.Data;
 using ApiSuerte.Models;
+//using Microsoft.EntityFrameworkCore;
+//using OpenQA.Selenium.Chrome;
+//using OpenQA.Selenium;
 
 namespace ApiSuerte.Controllers
 {
@@ -25,25 +28,35 @@ namespace ApiSuerte.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuario()
         {
-            return null;
-            //await _context.Usuario.ToListAsync();
+            return await _context.Usuario.ToListAsync();
         }
 
         // GET: api/Usuarios/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Usuario>> GetUsuario(int id)
         {
-            //var usuario = null;
-            //await _context.Usuario.FindAsync(id);
+            var usuario = await _context.Usuario.FindAsync(id);
 
-            //if (usuario == null)
-            //{
-            //    return NotFound();
-            //}
+            if (usuario == null)
+            {
+                return NotFound();
+            }
 
-            return null;
+            return usuario;
         }
 
+        [HttpGet("{nombre}")]
+        public async Task<ActionResult<Usuario>> GetUsuarioNombre(string nombre)
+        {
+            var usuario = await _context.Usuario.FindAsync(nombre);
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return usuario;
+        }
         // PUT: api/Usuarios/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -74,14 +87,32 @@ namespace ApiSuerte.Controllers
 
             return NoContent();
         }
+        
+
+
+        //[HttpPost]
+        //public int Login(Usuario usuario)
+        //{
+        //    int? userId = _context(usuario.Correo, usuario.Contrasena).FirstOrDefault();
+
+        //    string message = string.Empty;
+        //    if (userId.Value==-1)
+        //    {
+        //            message = "Username and/or password is incorrect.";
+        //        return -1;
+        //    }
+
+        //    //ViewBag.Message = message;
+        //    return (int)userId;
+        //}
 
         // POST: api/Usuarios
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Usuario>> PostUsuario([FromBody]Usuario usuario)
+        public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
         {
-            //_context.Usuario.Add(usuario);
-            //await _context.SaveChangesAsync();
+            _context.Usuario.Add(usuario);
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetUsuario", new { id = usuario.Id }, usuario);
         }
@@ -90,22 +121,21 @@ namespace ApiSuerte.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUsuario(int id)
         {
-            //var usuario = await _context.Usuario.FindAsync(id);
-            //if (usuario == null)
-            //{
-            //    return NotFound();
-            //}
+            var usuario = await _context.Usuario.FindAsync(id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
 
-            //_context.Usuario.Remove(usuario);
-            //await _context.SaveChangesAsync();
+            _context.Usuario.Remove(usuario);
+            await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
         private bool UsuarioExists(int id)
         {
-            return true;
-            //_context.Usuario.Any(e => e.Id == id);
+            return _context.Usuario.Any(e => e.Id == id);
         }
     }
 }

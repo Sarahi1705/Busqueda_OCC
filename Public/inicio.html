@@ -19,10 +19,6 @@
 
     <!--Header - menu-->
     <header>
-
-      
-
-
             <div class="menu" id="show-menu">
 
                 <nav>
@@ -31,29 +27,22 @@
                         <li><a href="../index.html"> <i class="fab fa-youtube"> </i>Logout</a></li>
                         <li>
                             <form action="" method="post" target="_blank">
-
-
-
-                                Busca una Empresa: <input type="search" name="busquedacodigo" size="10" maxlength="10">
-
-                                <input type="submit" value="Buscar">
-
+                                Busca una Empresa: <input type="search" id="b" name="busquedacodigo" size="10" maxlength="10">
+                                <input type="button" value="Buscar" onclick="callerFun()">
                                 </p>
-
                             </form>
-
                         </li>
                     </ul>
-
                 </nav>
-
             </div>
         </div>
-
     </header>
 
-    
-        <table summary="Coca Cola">
+    </thead>
+    <tbody id="table_user">
+    </tbody>
+        <!--<table>
+            <caption>Coca-Cola</caption>
             
             <thead>
               <tr>
@@ -64,8 +53,8 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row"id="nombreempresa"></th>
+                <td id="numero"></td>
               
               </tr>
               <tr>
@@ -82,6 +71,7 @@
                
               </tr>
             </tbody>
+        -->
  
 
    
@@ -91,5 +81,5 @@
 
 </body>
 
-
+<script src="../Js/suerte.js"></script>
 </html>

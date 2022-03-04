@@ -10,11 +10,11 @@ namespace ApiSuerte.Models
     [Table("Usuario")]
     public partial class Usuario
     {
-        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        //public Usuario()
-        //{
-        //    Busqueda = new HashSet<Busqueda>();
-        //}
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Usuario()
+        {
+            Busqueda = new HashSet<Busqueda>();
+        }
 
         public int Id { get; set; }
 
@@ -36,7 +36,7 @@ namespace ApiSuerte.Models
         [StringLength(50)]
         public string Correo { get; set; }
 
-        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        //public virtual ICollection<Busqueda> Busqueda { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Busqueda> Busqueda { get; set; }
     }
 }

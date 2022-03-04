@@ -10,10 +10,6 @@ namespace ApiSuerte.Models
     [Table("Busqueda")]
     public partial class Busqueda
     {
-        //public Busqueda()
-        //{
-        //    Usuario = new HashSet<Usuario>();
-        //}
         [Key]
         public int Id_Busqueda { get; set; }
 
@@ -25,9 +21,8 @@ namespace ApiSuerte.Models
 
         public DateTime FechaBusqueda { get; set; }
 
-        public int Id_Busqueda_Usuario { get; set; }
+        //public int Id_Busqueda_Usuario { get; set; }
 
-
-        //public virtual ICollection <Usuario> Usuario { get; set; }
+        //public virtual Usuario Usuario { get; set; }
     }
 }

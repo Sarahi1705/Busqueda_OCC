@@ -14,8 +14,8 @@ namespace ApiSuerte.Data
         {
         }
 
-        //public DbSet<ApiSuerte.Models.Usuario> Usuario { get; set; }
+        public DbSet<ApiSuerte.Models.Usuario> Usuario { get; set; }
 
-        //public DbSet<ApiSuerte.Models.Busqueda> Busqueda { get; set; }
+        public DbSet<ApiSuerte.Models.Busqueda> Busqueda { get; set; }
     }
 }
